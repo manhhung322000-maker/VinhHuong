@@ -213,7 +213,12 @@ $("hero").innerHTML = hs;
  </div>
  <div class="albc" id="albCov"><div>📷 ${esc(D.albLbl)}<small>${esc(D.albSub)}</small></div></div>`;
  $("evs").innerHTML=[[D.ev1,D.timeG,D.timeG2,D.addrG,D.mapG],[D.ev2,D.timeB,D.timeB2,D.addrB,D.mapB]].map(e=>`<div class="ev"><h3>${esc(e[0])}</h3><div class="t">${esc(e[1])}</div><div class="d">${esc(D.day1)}</div><div class="r2"><div class="t">${esc(e[2])}</div><div class="d">${esc(D.day2)}</div></div><div class="a">${esc(e[3])}</div><a class="btn" target="_blank" rel="noopener" href="${esc(map(e[4],e[3]))}">${esc(D.dirBtn)}</a></div>`).join("");
- try{$("seal").textContent=D.groomShort[0]+"&"+D.brideShort[0]}catch(x){}
+ try {
+    $("seal").textContent =
+        (D.coverSealGroom || D.coverGroom || D.groomShort)[0]
+        + "&"
+        + (D.coverSealBride || D.coverBride || D.brideShort)[0];
+} catch (x) {}
  ["saveDate","heroBtn","invTitle","coverTtl","hint","evSmall","evTitle","giftSmall","giftTitle","giftNote","albLbl"].forEach(k=>{const el=$("t_"+k);if(el)el.textContent=D[k]});
  $("fold").textContent=D.fold;$("albFile").parentNode.firstChild.textContent=D.addPhoto;
  [[D.lblGroom,D.acc1Name,D.acc1No],[D.lblBride,D.acc2Name,D.acc2No]].forEach((v,i)=>{const g=document.querySelectorAll(".gc")[i];if(!g)return;g.querySelector("h3").textContent=v[0];g.querySelector(".bk").textContent=D.bank;g.querySelector(".nm2").textContent=v[1];g.querySelector(".no").textContent=v[2];const bt=g.querySelector("button");bt.dataset.copy=v[2];bt.textContent=D.copyBtn});
