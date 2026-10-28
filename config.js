@@ -56,7 +56,7 @@ window.WEDDING = {
   "dirBtn": "📍 Chỉ đường",
   "giftSmall": "Mừng cưới",
   "giftTitle": "Gửi lời chúc phúc",
-  "giftNote": "Nếu không thể tham dự, bạn có thể gửi quà mừng cưới đến hai bạn qua mã QR bên dưới.",
+  "giftNote": "Nếu không thể tham dự, bạn có thể gửi quà mừng cưới đến chúng tôi qua mã QR bên dưới.",
   "bank": "Vietcombank",
   "acc1Name": "DUONG VAN VINH",
   "acc1No": "0341007196792",
