@@ -219,7 +219,13 @@ $("hero").innerHTML = hs;
         + (D.coverSealBride || D.coverBride || D.brideShort)[0];
 } catch (x) {}
  ["saveDate","heroBtn","invTitle","coverTtl","hint","evSmall","evTitle","giftSmall","giftTitle","giftNote","albLbl"].forEach(k=>{const el=$("t_"+k);if(el)el.textContent=D[k]});
- $("fold").textContent=D.fold;$("albFile").parentNode.firstChild.textContent=D.addPhoto;
+ const fold = $("fold");
+if (fold) fold.textContent = D.fold;
+
+const albFile = $("albFile");
+if (albFile && albFile.parentNode) {
+    albFile.parentNode.firstChild.textContent = D.addPhoto;
+}
  [[D.lblGroom,D.acc1Name,D.acc1No],[D.lblBride,D.acc2Name,D.acc2No]].forEach((v,i)=>{const g=document.querySelectorAll(".gc")[i];if(!g)return;g.querySelector("h3").textContent=v[0];g.querySelector(".bk").textContent=D.bank;g.querySelector(".nm2").textContent=v[1];g.querySelector(".no").textContent=v[2];const bt=g.querySelector("button");bt.dataset.copy=v[2];bt.textContent=D.copyBtn});
  updateCover();
  document.title="Thiệp cưới "+D.groomShort+" & "+D.brideShort;
@@ -236,6 +242,24 @@ function closeCard() {
     c.classList.remove("gone");
     c.classList.remove("open");
 }
+
+// Bấm bìa để mở thiệp
+$("cover").onclick = () => {
+    if (!$("cover").classList.contains("open")) {
+        openCard();
+    }
+};
+
+// Bấm nội dung thiệp để đóng, trừ khu vực album
+$("page").addEventListener("click", (e) => {
+    if (e.target.closest("#albCov") || e.target.closest("#album")) {
+        return;
+    }
+
+    if ($("cover").classList.contains("gone")) {
+        closeCard();
+    }
+});
 function buildForm(){$("form").innerHTML=Object.keys(DEF).map(k=>(GROUPS[k]?`<h4 style="margin:18px 0 0;color:#9b3b4a;border-bottom:1px solid #eee">${GROUPS[k]}</h4>`:"")+`<label>${LABELS[k]}</label>${["msg","thanks","giftNote"].includes(k)?`<textarea rows="3" data-k="${k}"></textarea>`:`<input data-k="${k}">`}`).join("");
  document.querySelectorAll("[data-k]").forEach(e=>e.value=D[e.dataset.k])}
 $("cover").onclick = (e) => {
