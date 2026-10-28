@@ -59,7 +59,7 @@ window.WEDDING = {
   "acc2Name": "NGUYEN THI HUONG",
   "acc2No": "9777016853",
   "copyBtn": "Sao chép số tài khoản",
-  "cover": "",
+  "cover": "anhthiep.jpg",
   "albumCover": "",
   "album": []
 };
