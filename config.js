@@ -10,8 +10,8 @@
 window.WEDDING = {
   "groom": "Dương Văn Vinh",
   "bride": "Nguyễn Thị Hương",
-  "groomShort": "Vinh",
-  "brideShort": "Hương",
+  "groomShort": "Văn Vinh",
+  "brideShort": "Thị Hương",
   "gDad": "Dương Văn Thuật",
   "gMom": "Ngô Thị Vân",
   "bDad": "Nguyễn Văn Lực",
