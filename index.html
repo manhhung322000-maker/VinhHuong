@@ -188,8 +188,19 @@ const $=id=>document.getElementById(id);
 const esc=s=>String(s).replace(/[&<>"]/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
 const map=(l,a)=>l&&/^https?:\/\//.test(l)?l:"https://www.google.com/maps/search/?api=1&query="+encodeURIComponent(a);
 function render(){
- const hs=esc(D.groomShort)+"<span>&amp;</span>"+esc(D.brideShort);
- $("names").innerHTML=hs;$("hero").innerHTML=hs;
+ const hs = esc(D.groomShort)
+    + "<span>&amp;</span>"
+    + esc(D.brideShort);
+
+// Chỉ bìa thiệp dùng tên riêng
+const coverNames = esc(D.coverGroom || D.groomShort)
+    + "<span>&amp;</span>"
+    + esc(D.brideShort);
+
+$("names").innerHTML = coverNames;
+
+// Các phần còn lại vẫn dùng tên cũ
+$("hero").innerHTML = hs;
  $("heroDate").textContent=D.heroDate;$("heroLunar").textContent=D.heroLunar;$("thanks").textContent=D.thanks;$("ft").textContent=D.groomShort+" & "+D.brideShort;
  const ph=$("photo");ph.style.backgroundImage=IMG?`url(${IMG})`:"";$("phTxt").style.display=IMG?"none":"";
  $("page").innerHTML=`
