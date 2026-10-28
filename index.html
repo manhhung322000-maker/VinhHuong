@@ -127,7 +127,6 @@ body:not(.edit) #edBtn,body:not(.edit) #panel,body:not(.edit) .addlbl,body:not(.
       <div class="face back"></div>
     </div>
   </div></div>
-  <button class="btn ghost" id="fold">Gập thiệp lại</button>
 </section>
 
 <section id="events">
@@ -225,12 +224,29 @@ $("hero").innerHTML = hs;
  updateCover();
  document.title="Thiệp cưới "+D.groomShort+" & "+D.brideShort;
 }
-function openCard(){const c=$("cover");c.classList.add("open");setTimeout(()=>c.classList.add("gone"),50);$("fold").style.visibility="visible"}
-function closeCard(){const c=$("cover");c.classList.remove("gone");c.classList.remove("open");$("fold").style.visibility="hidden"}
+function openCard() {
+    const c = $("cover");
+    c.classList.remove("gone");
+    c.classList.add("open");
+    setTimeout(() => c.classList.add("gone"), 50);
+}
+
+function closeCard() {
+    const c = $("cover");
+    c.classList.remove("gone");
+    c.classList.remove("open");
+}
 function buildForm(){$("form").innerHTML=Object.keys(DEF).map(k=>(GROUPS[k]?`<h4 style="margin:18px 0 0;color:#9b3b4a;border-bottom:1px solid #eee">${GROUPS[k]}</h4>`:"")+`<label>${LABELS[k]}</label>${["msg","thanks","giftNote"].includes(k)?`<textarea rows="3" data-k="${k}"></textarea>`:`<input data-k="${k}">`}`).join("");
  document.querySelectorAll("[data-k]").forEach(e=>e.value=D[e.dataset.k])}
-$("cover").onclick=()=>{if(!$("cover").classList.contains("open"))openCard()};
-$("fold").onclick=closeCard;
+$("cover").onclick = (e) => {
+    if (e.target.closest("#albCov")) return;
+
+    if ($("cover").classList.contains("open")) {
+        closeCard();
+    } else {
+        openCard();
+    }
+};
 $("edBtn").onclick=()=>{buildForm();$("panel").classList.add("show")};
 $("close").onclick=()=>$("panel").classList.remove("show");
 $("save").onclick=()=>{document.querySelectorAll("[data-k]").forEach(e=>D[e.dataset.k]=e.value.trim());
