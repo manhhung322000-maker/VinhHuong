@@ -26,7 +26,7 @@ window.WEDDING = {
   "addrG": "Số nhà 02, ngõ 8, thôn Tứ Xã, xã Phùng Nguyên, tỉnh Phú Thọ",
   "addrB": "76 Chiến Thắng, KDC Lạc Đạo, phường Lê Đại Hành, TP Hải Phòng",
   "mapG": "https://maps.app.goo.gl/c1LoJbkRnSVDpmcR7",
-  "mapB": "https://maps.app.goo.gl/mAAhthe7BK7CP3PX7",
+  "mapB": "https://maps.app.goo.gl/BgyVqKZZ98oGYmJn8",
   "thanks": "Sự hiện diện của bạn là niềm vinh hạnh của gia đình chúng tôi.",
   "heroDate": "28 – 29 . 11 . 2026",
   "heroLunar": "Tức ngày 20 – 21 tháng 10 Âm lịch",
