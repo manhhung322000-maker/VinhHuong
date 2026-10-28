@@ -193,9 +193,10 @@ function render(){
     + esc(D.brideShort);
 
 // Chỉ bìa thiệp dùng tên riêng
-const coverNames = esc(D.coverGroom || D.groomShort)
+const coverNames =
+    esc(D.coverGroom || D.groomShort)
     + "<span>&amp;</span>"
-    + esc(D.brideShort);
+    + esc(D.coverBride || D.brideShort);
 
 $("names").innerHTML = coverNames;
 
