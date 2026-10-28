@@ -1,0 +1,65 @@
+/* =====================================================
+   FILE CHỈNH SỬA THIỆP – chỉ cần sửa file này trên GitHub
+   (bấm vào config.js → biểu tượng cây bút ✎ → sửa → Commit changes)
+   - Chỉ sửa phần chữ nằm trong dấu ngoặc kép "..."
+   - Ảnh: tải ảnh vào thư mục images/ của repository, rồi ghi đường dẫn
+       cover: "images/cover.jpg"           (ảnh bìa thiệp)
+       albumCover: "images/a1.jpg"        (ảnh bìa album, để trống = ảnh đầu tiên)
+       album: ["images/a1.jpg","images/a2.jpg"]   (các ảnh trong album)
+   ===================================================== */
+window.WEDDING = {
+  "groom": "Dương Văn Vinh",
+  "bride": "Nguyễn Thị Hương",
+  "groomShort": "Vinh",
+  "brideShort": "Hương",
+  "gDad": "Dương Văn Thuật",
+  "gMom": "Ngô Thị Vân",
+  "bDad": "Nguyễn Văn Lực",
+  "bMom": "Hoàng Thị Thu",
+  "msg": "Trân trọng kính mời bạn đến dự buổi tiệc chung vui cùng gia đình chúng tôi nhân dịp lễ thành hôn của hai con.",
+  "day1": "Thứ Bảy, 28/11/2026 (20/10 Âm lịch)",
+  "day2": "Chủ Nhật, 29/11/2026 (21/10 Âm lịch)",
+  "timeG": "10:00",
+  "timeG2": "10:00",
+  "timeB": "10:00",
+  "timeB2": "10:00",
+  "addrG": "Số nhà 02, ngõ 8, thôn Tứ Xã, xã Phùng Nguyên, tỉnh Phú Thọ",
+  "addrB": "76 Chiến Thắng, KDC Lạc Đạo, phường Lê Đại Hành, TP Hải Phòng",
+  "mapG": "",
+  "mapB": "",
+  "thanks": "Sự hiện diện của bạn là niềm vinh hạnh của gia đình chúng tôi.",
+  "heroDate": "28 – 29 . 11 . 2026",
+  "heroLunar": "Tức ngày 20 – 21 tháng 10 Âm lịch",
+  "saveDate": "Save the date",
+  "heroBtn": "Xem thiệp mời ↓",
+  "invTitle": "Trân trọng kính mời",
+  "coverTtl": "Thiệp mời",
+  "hint": "Chạm để mở thiệp",
+  "lblGirl": "Nhà gái",
+  "lblBoy": "Nhà trai",
+  "pre1": "Ông",
+  "pre2": "Bà",
+  "lblBride": "Cô dâu",
+  "lblGroom": "Chú rể",
+  "albLbl": "Album ảnh cưới",
+  "albSub": "Chạm để xem",
+  "addPhoto": "+ Thêm ảnh",
+  "fold": "Gập thiệp lại",
+  "evSmall": "Thời gian & địa điểm",
+  "evTitle": "Lễ cưới của chúng tôi",
+  "ev1": "Lễ vu quy – Nhà gái",
+  "ev2": "Lễ thành hôn – Nhà trai",
+  "dirBtn": "📍 Chỉ đường",
+  "giftSmall": "Mừng cưới",
+  "giftTitle": "Gửi lời chúc phúc",
+  "giftNote": "Nếu không thể đến dự, bạn có thể gửi quà mừng cưới đến hai bạn qua mã QR bên dưới.",
+  "bank": "Vietcombank",
+  "acc1Name": "DUONG VAN VINH",
+  "acc1No": "0341007196792",
+  "acc2Name": "NGUYEN THI HUONG",
+  "acc2No": "9777016853",
+  "copyBtn": "Sao chép số tài khoản",
+  "cover": "",
+  "albumCover": "",
+  "album": []
+};
